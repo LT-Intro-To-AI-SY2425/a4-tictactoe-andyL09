@@ -9,7 +9,11 @@ class TTTBoard:
         board - a list of '*'s, 'X's & 'O's. 'X's represent moves by player 'X', 'O's
             represent moves by player 'O' and '*'s are spots no one has yet played on
     """
+    row1 = ['*', '*', '*']
+    row2 = ['*', '*', '*']
+    row3 = ['*', '*', '*']
 
+    print(row1 /n row2 /n row3)
     pass
 
 
@@ -28,15 +32,15 @@ def play_tic_tac_toe() -> None:
         try:
             int(maybe_int)
             return True
-        except ValueError:
-            return False
+        except ValueError:# this makes sense yea
+            return False#couldnt the except be a else instead
 
     brd = TTTBoard()
     players = ["X", "O"]
     turn = 0
 
-    while not brd.game_over():
-        print(brd)
+    while not brd.game_over():#is the not part rfering to 'not true'
+        print(brd)# or something else -- Dont Understand
         move: str = input(f"Player {players[turn]} what is your move? ")
 
         if not is_int(move):
