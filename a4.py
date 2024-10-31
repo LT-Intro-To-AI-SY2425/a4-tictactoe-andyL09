@@ -9,13 +9,13 @@ class TTTBoard:
         board - a list of '*'s, 'X's & 'O's. 'X's represent moves by player 'X', 'O's
             represent moves by player 'O' and '*'s are spots no one has yet played on
     """
-    row1 = ['*', '*', '*']
-    row2 = ['*', '*', '*']
-    row3 = ['*', '*', '*']
-
-    print(row1 /n row2 /n row3)
-    pass
-
+    class startBoard:
+        def __init__(self, r1 = ["*", "*", "*"], r2 = ["*", "*", "*"], r3 = ["*", "*", "*"]):
+            self.row1 = ror1w1
+            self.row2 = r2
+            self.row3 = r3
+            pass
+        pass
 
 def play_tic_tac_toe() -> None:
     """Uses your class to play TicTacToe"""
@@ -39,7 +39,7 @@ def play_tic_tac_toe() -> None:
     players = ["X", "O"]
     turn = 0
 
-    while not brd.game_over():#is the not part rfering to 'not true'
+    while not brd.game_over():#is the not part refering to 'not true'
         print(brd)# or something else -- Dont Understand
         move: str = input(f"Player {players[turn]} what is your move? ")
 
