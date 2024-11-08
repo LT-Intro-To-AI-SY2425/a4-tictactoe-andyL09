@@ -11,7 +11,6 @@ class TTTBoard:
     """
     def __init__(self) -> None:
         self.board = ['*']* 9
-        pass
 
     def __str__(self) -> str:
         s = ""
@@ -23,15 +22,15 @@ class TTTBoard:
         if pos > 8 or pos < 0 or self.board[pos] != '*':
             return False
 
-            self.board[pos] = player
-            return True
+        self.board[pos] = player
+        return True
         
 
     def has_won(self, player) -> bool:
         ps = player *3 # either [xxx] or [ooo]
         # check horizontal 
         if self.board[:3] == ps or self.board[3:6] == ps or self.board[6:] == ps:
-            return true
+            return True
         # check for win vertical
         if self.board[::3] == ps or self.board[1::3] == ps or self.board[2::3] == ps:
             return True
@@ -43,7 +42,7 @@ class TTTBoard:
         return False
 
     def game_over(self) -> bool:
-        if self.has_won("x") or self.has_won("0") or "*" not in self.board:
+        if self.has_won("X") or self.has_won("O") or "*" not in self.board:
             return True
         return False
 
